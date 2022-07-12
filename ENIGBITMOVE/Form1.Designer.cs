@@ -44,6 +44,8 @@
             this.RunButton = new System.Windows.Forms.Button();
             this.Mask = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.FileLeftArrow = new System.Windows.Forms.Button();
+            this.FileRightArrow = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,11 +200,31 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Waiting..";
             // 
+            // FileLeftArrow
+            // 
+            this.FileLeftArrow.Location = new System.Drawing.Point(467, 12);
+            this.FileLeftArrow.Name = "FileLeftArrow";
+            this.FileLeftArrow.Size = new System.Drawing.Size(23, 23);
+            this.FileLeftArrow.TabIndex = 17;
+            this.FileLeftArrow.Text = "<";
+            this.FileLeftArrow.UseVisualStyleBackColor = true;
+            // 
+            // FileRightArrow
+            // 
+            this.FileRightArrow.Location = new System.Drawing.Point(496, 12);
+            this.FileRightArrow.Name = "FileRightArrow";
+            this.FileRightArrow.Size = new System.Drawing.Size(23, 23);
+            this.FileRightArrow.TabIndex = 18;
+            this.FileRightArrow.Text = ">";
+            this.FileRightArrow.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 410);
+            this.Controls.Add(this.FileRightArrow);
+            this.Controls.Add(this.FileLeftArrow);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Mask);
             this.Controls.Add(this.RunButton);
@@ -245,5 +267,7 @@
         private Button RunButton;
         private TextBox Mask;
         private Label label1;
+        private Button FileLeftArrow;
+        private Button FileRightArrow;
     }
 }
