@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.Logo = new System.Windows.Forms.Label();
-            this.FilesList = new System.Windows.Forms.Panel();
+            this.FilesListPanel = new System.Windows.Forms.Panel();
             this.FilesLocation = new System.Windows.Forms.TextBox();
             this.FilesLocationLabel = new System.Windows.Forms.Label();
             this.OptionLabel = new System.Windows.Forms.Label();
             this.EncryptButton = new System.Windows.Forms.RadioButton();
             this.DecryptButton = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.FindButton = new System.Windows.Forms.Button();
             this.MaskLabel = new System.Windows.Forms.Label();
             this.KeyLabel = new System.Windows.Forms.Label();
             this.KeyInput = new System.Windows.Forms.TextBox();
@@ -59,14 +59,14 @@
             this.Logo.TabIndex = 0;
             this.Logo.Text = "ENIGBITMOVE";
             // 
-            // FilesList
+            // FilesListPanel
             // 
-            this.FilesList.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.FilesList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.FilesList.Location = new System.Drawing.Point(306, 40);
-            this.FilesList.Name = "FilesList";
-            this.FilesList.Size = new System.Drawing.Size(213, 308);
-            this.FilesList.TabIndex = 1;
+            this.FilesListPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.FilesListPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.FilesListPanel.Location = new System.Drawing.Point(306, 40);
+            this.FilesListPanel.Name = "FilesListPanel";
+            this.FilesListPanel.Size = new System.Drawing.Size(213, 308);
+            this.FilesListPanel.TabIndex = 1;
             // 
             // FilesLocation
             // 
@@ -119,14 +119,15 @@
             this.DecryptButton.Text = "Decrypt";
             this.DecryptButton.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // FindButton
             // 
-            this.button1.Location = new System.Drawing.Point(225, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Find";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FindButton.Location = new System.Drawing.Point(225, 62);
+            this.FindButton.Name = "FindButton";
+            this.FindButton.Size = new System.Drawing.Size(75, 23);
+            this.FindButton.TabIndex = 8;
+            this.FindButton.Text = "Find";
+            this.FindButton.UseVisualStyleBackColor = true;
+            this.FindButton.Click += new System.EventHandler(this.FindButton_LoadUserFiles);
             // 
             // MaskLabel
             // 
@@ -175,6 +176,7 @@
             // 
             // RunButton
             // 
+            this.RunButton.Enabled = false;
             this.RunButton.Location = new System.Drawing.Point(306, 354);
             this.RunButton.Name = "RunButton";
             this.RunButton.Size = new System.Drawing.Size(213, 23);
@@ -208,6 +210,7 @@
             this.FileLeftArrow.TabIndex = 17;
             this.FileLeftArrow.Text = "<";
             this.FileLeftArrow.UseVisualStyleBackColor = true;
+            this.FileLeftArrow.Click += new System.EventHandler(this.FileLeftArrow_Click);
             // 
             // FileRightArrow
             // 
@@ -217,6 +220,7 @@
             this.FileRightArrow.TabIndex = 18;
             this.FileRightArrow.Text = ">";
             this.FileRightArrow.UseVisualStyleBackColor = true;
+            this.FileRightArrow.Click += new System.EventHandler(this.FileRightArrow_Click);
             // 
             // Form1
             // 
@@ -232,13 +236,13 @@
             this.Controls.Add(this.KeyInput);
             this.Controls.Add(this.KeyLabel);
             this.Controls.Add(this.MaskLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.FindButton);
             this.Controls.Add(this.DecryptButton);
             this.Controls.Add(this.EncryptButton);
             this.Controls.Add(this.OptionLabel);
             this.Controls.Add(this.FilesLocationLabel);
             this.Controls.Add(this.FilesLocation);
-            this.Controls.Add(this.FilesList);
+            this.Controls.Add(this.FilesListPanel);
             this.Controls.Add(this.Logo);
             this.Name = "Form1";
             this.Text = "ENIGBITMOVE";
@@ -252,13 +256,13 @@
         #endregion
 
         private Label Logo;
-        private Panel FilesList;
+        private Panel FilesListPanel;
         private TextBox FilesLocation;
         private Label FilesLocationLabel;
         private Label OptionLabel;
         private RadioButton EncryptButton;
         private RadioButton DecryptButton;
-        private Button button1;
+        private Button FindButton;
         private Label MaskLabel;
         private Label KeyLabel;
         private TextBox KeyInput;
