@@ -1,6 +1,6 @@
 ﻿namespace ENIGBITMOVE
 {
-    partial class Form1
+    partial class menuForm
     {
         /// <summary>
         ///  Required designer variable.

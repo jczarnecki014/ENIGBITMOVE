@@ -78,16 +78,19 @@
             }
             return true;
         }
-        public static bool CheckValidationOfMenu(){
-            bool ValidationOfMenuStatus = (CheckValidationOfOption() == true && CheckValidationOfMask() == true && 
-                                           CheckValidationOfKey() == true) ? true:false;
-            return ValidationOfMenuStatus;
-        }
         public static void GetAllYouserChoice()
         { 
             List <FileElements>selectedFiles = FileList.GetCheckedElements();
-           
+           //do dokończenia
             
+        }
+        public static string GetUserMask()
+        {
+            return Mask.Text;
+        }
+        public static string GetUserKey()
+        {
+            return KeyInput.Text;
         }
     }
 

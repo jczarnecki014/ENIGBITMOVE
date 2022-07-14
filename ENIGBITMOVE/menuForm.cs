@@ -1,14 +1,18 @@
 using System.IO;
 namespace ENIGBITMOVE
 {
-    public partial class Form1 : Form
+    public partial class menuForm : Form
     {
-        public Form1()
+        public menuForm()
         {
             InitializeComponent();
-            menu.LoadMenuElements(EncryptButton,DecryptButton,Mask,KeyInput,RunButton);
+            global::menu.LoadMenuElements(EncryptButton, DecryptButton, Mask, KeyInput, RunButton);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("This project is only concept and my skill presentation, and it shouldn't be used in real encryptions","WARNING !");
+        }
 
         private void FindButton_LoadUserFiles(object sender, EventArgs e)
         {
@@ -41,13 +45,11 @@ namespace ENIGBITMOVE
 
         private void RunButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"{menu.CheckValidationOfMenu()}");
-            menu.GetAllYouserChoice();
+            this.Hide();
+            new consoleForm(this).Show();
+            /*MessageBox.Show($"{menu.CheckValidationOfMenu()}");
+            menu.GetAllYouserChoice();*/
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("This project is only concept and my skill presentation, and it shouldn't be used in real encryptions","WARNING !");
-        }
     }
 }
