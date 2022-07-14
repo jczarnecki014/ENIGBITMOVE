@@ -38,5 +38,16 @@ namespace ENIGBITMOVE
         {
             FileList.changeListLevel(sender);
         }
+
+        private void RunButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"{menu.CheckValidationOfMenu()}");
+            menu.GetAllYouserChoice();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("This project is only concept and my skill presentation, and it shouldn't be used in real encryptions","WARNING !");
+        }
     }
 }

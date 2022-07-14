@@ -154,6 +154,7 @@
             this.KeyInput.Enabled = false;
             this.KeyInput.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.KeyInput.Location = new System.Drawing.Point(24, 257);
+            this.KeyInput.MaxLength = 12;
             this.KeyInput.Multiline = true;
             this.KeyInput.Name = "KeyInput";
             this.KeyInput.Size = new System.Drawing.Size(276, 64);
@@ -183,6 +184,7 @@
             this.RunButton.TabIndex = 14;
             this.RunButton.Text = "Run";
             this.RunButton.UseVisualStyleBackColor = true;
+            this.RunButton.Click += new System.EventHandler(this.RunButton_Click);
             // 
             // Mask
             // 
@@ -246,6 +248,7 @@
             this.Controls.Add(this.Logo);
             this.Name = "Form1";
             this.Text = "ENIGBITMOVE";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

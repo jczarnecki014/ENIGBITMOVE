@@ -41,11 +41,53 @@
                 RunButton.Enabled = false;
             }
         }
-
+        public static bool CheckValidationOfOption()
+        { 
+            if(EncryptButton.Checked || DecryptButton.Checked){
+                 return true;
+            }
+            else{
+                return false;
+            }
+        }
+        public static bool CheckValidationOfMask()
+        {
+            try
+            {
+                Int32.Parse(Mask.Text);
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+                return true;
+        }
+        public static bool CheckValidationOfKey()
+        {
+           if(KeyInput.Text.Length < 12)
+           {
+                return false;
+           }
+           try
+            {
+                Int64.Parse(KeyInput.Text);
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool CheckValidationOfMenu(){
+            bool ValidationOfMenuStatus = (CheckValidationOfOption() == true && CheckValidationOfMask() == true && 
+                                           CheckValidationOfKey() == true) ? true:false;
+            return ValidationOfMenuStatus;
+        }
         public static void GetAllYouserChoice()
         { 
             List <FileElements>selectedFiles = FileList.GetCheckedElements();
-            // do dokonczenia
+           
+            
         }
     }
 

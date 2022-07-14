@@ -17,6 +17,7 @@ using System;
             fileLabel = new Label();
             fileLabel.Name = this.id.ToString();
             fileLabel.Text = physicalFile.Name;
+            fileLabel.Width = 213;
             fileLabel.Click += new EventHandler(FileList.CheckElement);
         }
 
