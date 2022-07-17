@@ -13,6 +13,7 @@ using System.Threading.Tasks;
             try
             {
                 validation.StartValidationOfMenu();
+                validation.StartValidationOfEncryption(new key(key.convertKey(menu.GetUserKey())));
             }
             catch (ValidationException ex)
             {
