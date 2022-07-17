@@ -78,11 +78,20 @@
             }
             return true;
         }
-        public static void GetAllYouserChoice()
+        public static string GetUserOption()
         { 
-            List <FileElements>selectedFiles = FileList.GetCheckedElements();
-           //do dokończenia
-            
+            if(EncryptButton.Checked)
+            {
+                return "encrypt";
+            }
+            else if(DecryptButton.Checked)
+            {
+                return "decrypt";
+            }
+            else
+            {
+                throw new Exception("Something went wrong");
+            }
         }
         public static string GetUserMask()
         {
@@ -92,5 +101,6 @@
         {
             return KeyInput.Text;
         }
+
     }
 

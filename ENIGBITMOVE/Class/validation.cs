@@ -9,7 +9,6 @@
             bool MaskCorrect = menu.CheckValidationOfMask();
             bool KeyCorrect = menu.CheckValidationOfKey();
             EnigConsole.WriteLine("START CHECKING THE CORRECTNESS OF FILLING IN THE MENU...");
-            EnigConsole.WriteLine("CHECKING VALIDATION THE OPTIONS..");
             EnigConsole.WriteLine("[MENU] CHECKING OPTIONS...: " + OptionCorrect);
             EnigConsole.WriteLine("[MENU] CHECKING MASK...: " + MaskCorrect);
             EnigConsole.WriteLine("[MENU] CHECKING KEY...: " + KeyCorrect);
@@ -28,7 +27,7 @@
                 throw new ValidationException("ONE OR MORE FIELDS WAS INCORRECTLY FILL");
             }
         }
-        public static void StartValidationOfEncryption(key obj)
+        public static void StartValidationOfKey(key obj)
         {
           EnigConsole.WriteLine("START CHECKING THE KEY CORRECTNES...");
           EnigConsole.SetFontColor(Color.Gray);

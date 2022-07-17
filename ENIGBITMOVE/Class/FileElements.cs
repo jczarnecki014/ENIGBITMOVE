@@ -33,5 +33,22 @@ using System;
             return elements;
         }
 
+        public static bool isEBM(FileElements element)
+        { 
+            bool CONDITION;
+            string fileExtension;
+            fileExtension = Path.GetExtension(element.physicalFile.FullName);
+            if(fileExtension == ".ebm")
+            {
+                CONDITION = true;
+            }
+            else
+            { 
+                CONDITION = false;
+            }
+            return CONDITION;
+            
+        }
+
     }
 

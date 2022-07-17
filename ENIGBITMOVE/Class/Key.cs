@@ -47,7 +47,7 @@
             int a,b;
             a = splitedNumberKey[8];
             b = splitedNumberKey[9];
-            return (Math.Sqrt(a) * Math.Sqrt(b) >=0) ? true : false;
+            return (Math.Sqrt(a) * Math.Sqrt(b) >0) ? true : false;
         }
         public bool CheckValidationOfSixthTwoNumbers()
         { 
