@@ -82,6 +82,7 @@
             this.Controls.Add(this.ConsoleComandPanel);
             this.Name = "consoleForm";
             this.Text = "ENIGBITMOVE - CONSOLE22";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.consoleForm_FormClosed);
             this.Shown += new System.EventHandler(this.consoleForm_Shown);
             this.ConsoleInfoPanel.ResumeLayout(false);
             this.ConsoleInfoPanel.PerformLayout();

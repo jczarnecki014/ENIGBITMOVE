@@ -16,6 +16,7 @@ using System.Threading.Tasks;
                 validation.StartValidationOfKey(new key(convertedKey));
                 List <FileElements> choosedFiles = FileList.GetCheckedElements();
 
+                EnigConsole.SetFontColor(Color.AliceBlue);
                 if(menu.GetUserOption() == "encrypt")
                 { 
                     foreach(FileElements element in choosedFiles)
@@ -31,23 +32,35 @@ using System.Threading.Tasks;
                             MessageBox.Show($"[{element.physicalFile.FullName}] - is encrypted yet, so ENIGBITMOVE rejected this file","Attention");
                         }
                     }
+                    EnigConsole.WriteLine("SUCESS, EVERY FILES WAS ENCRYPTED");
                 }
+
                 else if(menu.GetUserOption() == "decrypt")
                 {
                     foreach(FileElements element in choosedFiles)
                     {
+                        if(FileElements.isEBM(element))
+                        { 
+                            string fileValue = filesIO.getValue(element);
+                            string decryptedString = Decryption.start(fileValue,convertedKey);
+                            string fileExtension = Decryption.GetExtension();
+                            filesIO.saveValue(decryptedString,fileExtension,element);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"[{element.physicalFile.FullName}] - is not encrypted yet, so ENIGBITMOVE rejected this file","Attention");
+                        }
                         
                     }
+                    EnigConsole.WriteLine("SUCESS, EVERY FILES WAS DECRYPTED");
                 }
                 
-                EnigConsole.SetFontColor(Color.AliceBlue);
-                EnigConsole.WriteLine("SUCESS, EVERY FILES WAS ENCRYPTED");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 EnigConsole.ClearConsole();
-                thisForm.Close();
+                thisForm.Hide();
                 menuForm.Show();
             }
             

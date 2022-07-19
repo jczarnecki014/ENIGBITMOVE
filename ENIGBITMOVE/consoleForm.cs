@@ -25,6 +25,11 @@ namespace ENIGBITMOVE
             main.runProgram(this,previousForm);
         }
 
+        private void consoleForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
         /*private void CONSOLE_Load(object sender, EventArgs e)
         {
             EnigConsole.SetPanels(ConsoleComandPanel, ConsoleInfoPanel);
