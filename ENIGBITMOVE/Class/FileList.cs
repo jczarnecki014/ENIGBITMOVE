@@ -9,6 +9,7 @@ using System.Collections.Generic;
         public static int someElementIsActive;
         private static int currentAppearFile = 0;
         private static int maxFillesCount = 12;
+        private static int list = 1;
 
         public static void setPanel(FileElements[] receiveFiles,Panel receiveFilePanel)
         {
@@ -67,8 +68,9 @@ using System.Collections.Generic;
                 case "FileLeftArrow":
                     if(currentAppearFile > 12 )
                     { 
-                        currentAppearFile -= 24;
+                        currentAppearFile -= (12+(12-(12*list - currentAppearFile)));
                         maxFillesCount -= 12;
+                        list--;
                         show();
                     }
                 break;
@@ -77,6 +79,7 @@ using System.Collections.Generic;
                     if(maxFillesCount < files.Length)
                     {
                         maxFillesCount = maxFillesCount + 12;
+                        list++;
                         show();
                     }
                 break;
