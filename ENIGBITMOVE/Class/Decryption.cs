@@ -24,15 +24,30 @@
         }
 
         private static string DecryptionStepOne(int multipler)
-        {   
-            DecryptedChar = new char[splitedCode.Length-1];
-            int iterator = 0;
+        {  
+            int mask = menu.GetUserMask();
+            int lengthOfArray = (splitedCode.Length - 1) / mask + 1;
+            DecryptedChar = new char[lengthOfArray];
+            int iteratorInSplitedArray = 0;
+            int iteratorInDecryptedArray =0;
+            int MaskIterator = 0;
             int convertedCode;
-            while(iterator<(splitedCode.Length-1))
+            while(iteratorInSplitedArray<(splitedCode.Length-1))
             {
-                convertedCode = Int32.Parse(splitedCode[iterator]);
-                DecryptedChar[iterator] = Convert.ToChar(convertedCode/multipler);
-                iterator++;
+                
+                if(MaskIterator%mask == 0 && MaskIterator != 0)
+                {
+                    convertedCode = Int32.Parse(splitedCode[iteratorInSplitedArray]);
+                    DecryptedChar[iteratorInDecryptedArray] = Convert.ToChar(convertedCode/multipler);
+                    iteratorInDecryptedArray++;
+                    MaskIterator =0;
+
+                }
+                else
+                {
+                    MaskIterator++;
+                }
+                iteratorInSplitedArray++;
             }
             return new string(DecryptedChar);
         }

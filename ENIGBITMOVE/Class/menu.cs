@@ -93,9 +93,9 @@
                 throw new Exception("Something went wrong");
             }
         }
-        public static string GetUserMask()
+        public static int GetUserMask()
         {
-            return Mask.Text;
+            return Int32.Parse(Mask.Text);
         }
         public static string GetUserKey()
         {

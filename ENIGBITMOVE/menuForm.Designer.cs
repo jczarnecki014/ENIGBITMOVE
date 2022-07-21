@@ -190,6 +190,7 @@
             // 
             this.Mask.Enabled = false;
             this.Mask.Location = new System.Drawing.Point(24, 187);
+            this.Mask.MaxLength = 2;
             this.Mask.Name = "Mask";
             this.Mask.Size = new System.Drawing.Size(276, 23);
             this.Mask.TabIndex = 15;
@@ -224,7 +225,7 @@
             this.FileRightArrow.UseVisualStyleBackColor = true;
             this.FileRightArrow.Click += new System.EventHandler(this.FileRightArrow_Click);
             // 
-            // Form1
+            // menuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,7 +247,7 @@
             this.Controls.Add(this.FilesLocation);
             this.Controls.Add(this.FilesListPanel);
             this.Controls.Add(this.Logo);
-            this.Name = "Form1";
+            this.Name = "menuForm";
             this.Text = "ENIGBITMOVE";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);

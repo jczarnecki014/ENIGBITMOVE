@@ -15,12 +15,25 @@
         }
         private static void EncryptionStepOne(int multipler)
         {   
-            EncryptedChars = new int[splitedText.Length];
-            int iterator = 0;
-            while(iterator < splitedText.Length)
+            int maskNumber = menu.GetUserMask();
+            Random random = new Random();
+            EncryptedChars = new int[splitedText.Length + (splitedText.Length * maskNumber)];
+            int EncryptedIterator = 0;
+            int MaskIterator = 0;
+            int SplitedIterator =0;
+            while(SplitedIterator < splitedText.Length)
             {
-                EncryptedChars[iterator] = Math.Abs(splitedText[iterator] * multipler);
-                iterator++;
+                if(MaskIterator % maskNumber == 0 && MaskIterator != 0)
+                {
+                    SplitedIterator++;
+                    MaskIterator =0;
+                }
+                else
+                {
+                    EncryptedChars[EncryptedIterator] = Math.Abs(random.Next(10,99)*multipler);
+                    MaskIterator++;
+                }
+                EncryptedIterator++;
             }
         }
         public static int[] start(string fileValue, int[] key)

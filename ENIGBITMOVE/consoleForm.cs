@@ -29,11 +29,5 @@ namespace ENIGBITMOVE
         {
             Application.Exit();
         }
-
-        /*private void CONSOLE_Load(object sender, EventArgs e)
-        {
-            EnigConsole.SetPanels(ConsoleComandPanel, ConsoleInfoPanel);
-            main.runProgram();
-        }*/
     }
 }

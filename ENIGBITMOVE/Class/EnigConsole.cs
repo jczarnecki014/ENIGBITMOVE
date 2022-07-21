@@ -31,10 +31,6 @@
             CommandPanel.Controls.Add(message);
 
         }
-        private static void AddMessageToInfoPanel(Label message)
-        {
-            //do napisania
-        }
         public static void WriteLine(string message)
         {
             Label readyMessage = CreateMessageLabel(message);

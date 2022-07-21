@@ -29,12 +29,6 @@ using System.Collections.Generic;
                     filePanel.Controls.Add(element.fileLabel);
                     currentAppearFile++;
                 }
-                /*foreach (FileElements element in files)
-                {
-                    MessageBox.Show(element.fileLabel.Name);
-                    element.fileLabel.Location = new Point(0,y+=25);
-                    filePanel.Controls.Add(element.fileLabel);
-                }*/
             }
         public static void CheckElement(object sender,EventArgs e)
         { 
