@@ -70,7 +70,8 @@ I'm think that is yet all important information about me and now let that I show
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
 
 ## Contact
-If you want to help me develop my skils or you have any idea to improve this project, pleas write to me:
+If you want to help me develop my skils or you have any idea to improve this project, pleas write to me:  
+
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/kuba.czarnecki.142/)
-[![Outlook](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](czarnecki.web@outlook.com)
+[![Outlook](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:czarnecki.web@outlook.com)
 
