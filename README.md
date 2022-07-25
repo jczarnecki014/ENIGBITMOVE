@@ -6,8 +6,8 @@
 # ENGIBITMOVE
 
 ENIGBITMOVE ? What this name should suggest ? So..., i also don't know why i choosed this name...
-Likely cause was, that i have changed conception on this program a lot of thime in the 
-proces of crating.. Anyway main mision of this program is seacure your files during uploading
+Likely cause was, that i have changed conception of this program a many time in the 
+proces of creating.. Anyway main mision of this program is seacure your files during uploading
 betwenn others devices.
 
 
@@ -16,7 +16,7 @@ betwenn others devices.
 
 ## Authors
 
-- [@katherinepeterson](https://www.github.com/octokatherine)
+- [@jczarnecki014](https://github.com/jczarnecki014)
 
 
 ## Features
@@ -55,9 +55,8 @@ How install ENIGBITMOVE ?
     
 ## 🚀 About Me
 Hi, I'm Kuba.  
-I from Poland and I'm 21 years old. For 1,5 years I am learing and developing my programming interests. You propably have noticed that both my code and my English skills aren't 
-free from defects.  Belive me, I am working on it ! I greduated a high school in the field of computer science and now i am studding in the "Wyższa Szkoła Bankowa We Wrocławiu" in the field of "Programmer".
-I'm think that is all important information about me and now let that I show you  in the next seciton what technologies have I already learned.
+I from Poland and I'm 21 years old. For 1,5 years I am learing and developing my programming interests. You propably have noticed that both my code and my English skills aren't free from defects. Please Belive me, I am working on it ! I greduated a high school in the field of computer science and now i am studding in the "Wyższa Szkoła Bankowa We Wrocławiu" in the field of "Programmer".
+I'm think that is yet all important information about me and now let that I show you in the next seciton what technologies have I already learned.
 
 ## 🛠 Skills
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -69,4 +68,9 @@ I'm think that is all important information about me and now let that I show you
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+
+## Contact
+If you want to help me develop my skils or you have any idea to improve this project, pleas write to me:
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/kuba.czarnecki.142/)
+[![Outlook](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](czarnecki.web@outlook.com)
 
